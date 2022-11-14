@@ -48,7 +48,7 @@ Spider.prototype = {
 	},
 
 	load: function(url, done, referrer) {
-		this.log('Loading', url);
+// 		this.log('Loading', url);
 		this.active.push(url);
 
 		if (this.opts.addReferrer) {
@@ -63,7 +63,7 @@ Spider.prototype = {
 			}
 
 			var doc = new Doc(url, res);
-			this.log('Success', url);
+// 			this.log('Success', url);
 			if (this.opts.catchErrors) {
 				try { done.call(this, doc); }
 				catch (err) { this.error(err, url); }
